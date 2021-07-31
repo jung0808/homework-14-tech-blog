@@ -1,9 +1,16 @@
-const router = require('express').Router();
+//Gather routes and export them to the server
 
-const apiRoutes = require('./api');
-const homeRoutes = require('./homeRoutes');
+const router = require("express").Router();
 
-router.use('/', homeRoutes);
-router.use('/api', apiRoutes);
+const apiRoutes = require("./api");
+const homeRoutes = require("./home-routes.js");
+const dashboardRoutes = require("./dashboard-routes.js");
+
+router.use("/api", apiRoutes);
+router.use("/", homeRoutes);
+router.use("/dashboard", dashboardRoutes);
+router.use((req, res) => {
+  res.status(404).end();
+});
 
 module.exports = router;

@@ -23,7 +23,7 @@ router.get("/", (req, res) => {
   })
     .then((dbPostData) => {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("homepage", { posts, loggedIn: req.session.loggedIn });
+      res.render("homepage", { posts, logged_in: req.session.logged_in });
     })
     .catch((err) => {
       console.log(err);
@@ -33,7 +33,7 @@ router.get("/", (req, res) => {
 
 //Display login page. However, if user is logged in, direct the user to the home page.
 router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect("/");
     return;
   }
@@ -42,7 +42,7 @@ router.get("/login", (req, res) => {
 
 //Sign up
 router.get("/signup", (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect("/");
     return;
   }

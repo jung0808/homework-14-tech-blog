@@ -30,9 +30,9 @@ Need to contact [jung0808?](https://github.com/jung0808) <br>
 
 # Screenshot of Project
 
-![Screenshot](Tech-Blog-1.PNG)
-![Screenshot](Tech-Blog-2.PNG)
-![Screenshot](Tech-Blog-3.PNG)
+![Screenshot](Tech-Blog-1.png)
+![Screenshot](Tech-Blog-2.png)
+![Screenshot](Tech-Blog-3.png)
 
 <br>
 
